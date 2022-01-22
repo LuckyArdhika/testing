@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Jacking Testing</title>
+</head>
+<body>
+  <form action="http://localhost:3001/prabayar/pulsa" method="POST">
+    <input type="text" value='{"product_name": "Telkomsel 2.000","price": 2555,"dest_number": "081222828282","sku_code": "TK2","pin": "0"}'>
+    <input type="submit">
+  </form>
+  <iframe src="http://localhost:3001/" frameborder="0"></iframe>
+  <iframe src="http://localhost:3000/" frameborder="0"></iframe>
+</body>
+</html>
